@@ -1,0 +1,16 @@
+{
+  "name": "simon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "sass": "node-sass -w src/main.scss -o src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  font-size: 1.6rem; }
+
+.main-container {
+  background: linear-gradient(to bottom left, #5d1a94 10%, black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: arial, Helvetica, sans-serif; }
+
+.tag-lines {
+  text-align: center;
+  margin: 2rem 0 6rem;
+  background: linear-gradient(to right, lime, #ff4040, #d9ff00, #00d9ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  text-shadow: -.6rem .6rem 1rem #000; }
+  .tag-lines .title {
+    font-size: 6rem; }
+  .tag-lines .title-sm {
+    font-size: 2.4rem; }
+
+.simon-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.4rem;
+  justify-content: center;
+  align-content: center;
+  background: #101010;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 50%;
+  width: 50rem;
+  height: 50rem;
+  position: relative;
+  box-shadow: inset 3px -3px 1rem 1rem #000; }
+
+.pad-container {
+  padding: 1rem;
+  width: 25rem;
+  height: 25rem;
+  overflow: hidden;
+  position: relative; }
+
+.pad {
+  width: 48rem;
+  height: 48rem;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer; }
+
+.pad-1 {
+  top: 8%;
+  left: 8%;
+  background: linear-gradient(to left, lime, #032200); }
+
+.pad-2 {
+  top: 8%;
+  right: 8%;
+  background: linear-gradient(to left, #ff4040, #220000 60%); }
+
+.pad-3 {
+  bottom: 8%;
+  left: 8%;
+  background: linear-gradient(to left, #d9ff00 60%, #233000); }
+
+.pad-4 {
+  bottom: 8%;
+  right: 8%;
+  background: linear-gradient(to left, #00d9ff, #000322 60%); }
+
+.center-circle {
+  position: absolute;
+  color: #fff;
+  width: 25rem;
+  height: 25rem;
+  z-index: 100;
+  background: #111;
+  border-radius: 50%;
+  transform: translate(50%, 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.4rem;
+  color: #0057b9;
+  box-shadow: inset 3px -3px 1rem 1rem #000; }
+
+.center-circle__name {
+  text-shadow: -4px 4px .4rem #000; }
+  .center-circle__name span {
+    font-size: 1.6rem;
+    color: #757575;
+    text-shadow: -4px 4px .4rem #000; }
+
+.button-start {
+  font-size: 2.6rem;
+  margin: 1.6rem 0 0;
+  cursor: pointer;
+  padding: .4rem;
+  background: linear-gradient(to bottom left, #e6e6e6, #181818);
+  border: none;
+  transition: all .2s ease-out;
+  transform: scale(1);
+  box-shadow: -4px 4px .4rem #000;
+  font-family: arial, Helvetica, sans-serif; }
+  .button-start:hover {
+    transform: scale(1.05); }
