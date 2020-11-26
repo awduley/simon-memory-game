@@ -22,12 +22,12 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-family: arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .tag-lines {
   text-align: center;
-  margin: 2rem 0 6rem;
+  margin: 2rem 0 4rem;
   background: linear-gradient(to right, rgb(0, 255, 0), rgb(255, 64, 64),  rgb(217, 255, 0),  rgb(0, 217, 255));
   -webkit-background-clip: text;
   color: transparent;
@@ -40,6 +40,16 @@ body {
 
   .title-sm {
     font-size: 2.4rem;
+  }
+}
+
+.game-info-container {
+  margin-bottom: 2rem;
+  
+  p {
+    font-size: 2.6rem;
+    color: rgb(0, 187, 0);
+    text-shadow: -.6rem .6rem 1rem #000;
   }
 }
 
@@ -79,42 +89,73 @@ body {
   top: 8%;
   left: 8%;
   background: linear-gradient(to left, rgb(0, 255, 0), rgb(3, 34, 0));
+
+  &.color-1 {
+    background: rgb(46, 255, 46);
+    box-shadow: inset 0 0 2rem #fff; 
+  }
 }
 
 .pad-2 {
   top: 8%;
   right: 8%;
   background: linear-gradient(to left, rgb(255, 64, 64), rgb(34, 0, 0) 60%);
+
+  &.color-2 {
+    background: rgb(255, 82, 82);
+    box-shadow: inset 0 0 2rem #fff; 
+  }
 }
 
 .pad-3 {
   bottom: 8%;
   left: 8%;
   background: linear-gradient(to left, rgb(217, 255, 0) 60%, rgb(35, 48, 0));
+
+  &.color-3 {
+    background: rgb(255, 255, 54);
+    box-shadow: inset 0 0 2rem #fff; 
+  }
 }
 
 .pad-4 {
   bottom: 8%;
   right: 8%;
-  background: linear-gradient(to left, rgb(0, 217, 255), rgb(0, 3, 34) 60%);
+  background: linear-gradient(to left, rgb(0, 217, 255), rgb(0, 3, 34) 60%); 
+
+  &.color-4 {
+    background: rgb(73, 228, 255);
+    box-shadow: inset 0 0 2rem #fff; 
+  }
+}
+
+.center-circle-lg {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  background: #111;
+  z-index: 2;
+  border-radius: 50%;
+  transform: translate(50%, 50%);
 }
 
 .center-circle {
   position: absolute;
   color: #fff;
-  width: 25rem;
-  height: 25rem;
+  width: 23rem;
+  height: 23rem;
   z-index: 100;
   background: #111;
   border-radius: 50%;
-  transform: translate(50%, 50%);
+  transform: translate(4.2%, 4.2%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3.4rem;
+  font-size: 3rem;
   color: rgb(0, 87, 185);
   box-shadow: inset 3px -3px 1rem 1rem #000;
+  z-index: 5;
 }
 
 .center-circle__name {
@@ -133,13 +174,78 @@ body {
   cursor: pointer;
   padding: .4rem;
   background: linear-gradient( to bottom left, rgb(230, 230, 230), rgb(24, 24, 24));
-  border: none;
   transition: all .2s ease-out;
   transform: scale(1);
   box-shadow: -4px 4px .4rem #000;
-  font-family: arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  border: none;
+  border-radius: 3px;
 
   &:hover {
-    transform: scale(1.05);
+    color: #00ff00;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-stop {
+  font-size: 1.6rem;
+  margin: 1.6rem 0 0;
+  cursor: pointer;
+  padding: .4rem;
+  background: linear-gradient( to bottom left, rgb(230, 230, 230), rgb(24, 24, 24));
+  transition: all .2s ease-out;
+  transform: scale(1);
+  box-shadow: -4px 4px .4rem #000;
+  font-family: 'Ubuntu', sans-serif;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    color: #ff0000;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.bump {
+  animation-name: bump;
+  animation-duration: .5s;
+
+  @keyframes bump {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(.95);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+.credits {
+  margin: 3rem;
+  text-align: center;
+  width: 66%;
+  font-weight: 300;
+  line-height: 2.2rem;
+  color: gray;
+
+  a {
+    transition: all .2s ease-out;
+    text-decoration: none;
+    color: rgb(0, 217, 255);
+
+    &:hover {
+      color: darken(rgb(0, 217, 255), 20%);
+    }
   }
 }

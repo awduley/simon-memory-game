@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simon</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <script src="main.js" defer></script>
 </head>
@@ -15,29 +17,41 @@
       <h3 class=title-sm>Memory Game</h3>
     </div>
 
+    <div class="game-info-container">
+      <p>Score: <span id="score"></span></p>
+    </div>
+
     <div class="simon-container">
 
-      <div class="pad-container pad-container-1">
+      <div id="pad-1" class="pad-container pad-container-1">
         <div class="pad pad-1"></div>
       </div>
 
-      <div class="pad-container pad-container-2">
+      <div id="pad-2" class="pad-container pad-container-2">
         <div class="pad pad-2"></div>
       </div>
 
-      <div class="pad-container pad-container-3">
+      <div id="pad-3" class="pad-container pad-container-3">
         <div class="pad pad-3"></div>
       </div>
 
-      <div class="pad-container pad-container-4">
+      <div id="pad-4" class="pad-container pad-container-4">
         <div class="pad pad-4"></div>
       </div>
 
-      <div class="center-circle">
-        <h3 class="center-circle__name">Nathan <span>&copy; 2011</span></h3>
-        <button class="button-start">Start Game!</button>
+      <div class="center-circle-lg">
+        <div class="center-circle">
+          <h3 class="center-circle__name">Nathan <span>&copy; 2011</span></h3>
+          <button id="start-button" class="button-start">Start Game!</button>
+          <button id="stop-button" class="button-stop">Stop Game!</button>
+        </div>
       </div>
       
+    </div><!-- .simon-container -->
+
+    <div class="credits">
+      <p>App developed by Crooked Fall Studios for my son Nathaniel Duley</p> 
+      <p>The code for this app is up on GitHub so feel free to play around with it and make it better! <a href="https://github.com/awduley/simon-memory-game" target="_blank">Simon Memory Game</a></p>
     </div>
 
   </main>
